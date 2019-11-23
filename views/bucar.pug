@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  div(class="container")
+    div(class='jumbotron')
+      form(method='post', action="/")
+        div(class="form-group")
+          label(for="Alias" class="col-sm-2 col-form-label") Divergente
+          input#Alias(type="Divergente" class="form-control" name="Alias"  placeholder="si o no")
+          br
+          button(type="submit" class="btn btn-primary") Submit
+    p #{data};

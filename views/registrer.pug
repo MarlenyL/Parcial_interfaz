@@ -1,0 +1,34 @@
+extends layout
+
+block content
+  div(class="container")
+    div(class='jumbotron')
+      form(method='post', action="/")
+        div(class="form-group")
+          label(for="Alias " class="col-sm-2 col-form-label") Alias
+          input#Alias(type="text" class="form-control" name="Alias" placeholder="Cuatro")
+        div(class="form-group")
+          label(for="Nombre " class="col-sm-2 col-form-label") Nombre
+          input#Nombre(type="text" class="form-control" name="Nombre" placeholder="Tobias Eaton")
+        div(class="form-group")
+          label(for="Faccion" class="col-sm-2 col-form-label") Faccion
+          input#Faccion(type="text" class="form-control " name="Faccion"  placeholder="Osadia")
+        div(class="form-group")
+          label(for="Actor" class="col-sm-2 col-form-label") Actor
+          input#Actor(type="text" class="form-control" name="Actor"  placeholder="Theo James")
+        div(class="form-group")
+          label(for="Divergente" class="col-sm-2 col-form-label") Divergente
+          input#Divergente(type="Divergente" class="form-control" name="Divergente"  placeholder="si o no")
+          br
+          button(type="submit" class="btn btn-primary") Submit
+    section
+        table(class="table table-hover")
+          thead
+            tr(class="table-dark")
+              th(scope="col") Alias
+              th(scope="col") Nombre
+              th(scope="col") Faccion
+              th(scope="col") Divergente
+              th(scope="col") Actor
+          tbody(id="table_body")
+    p #{data};
